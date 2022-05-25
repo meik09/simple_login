@@ -1,5 +1,5 @@
 {
-    "name": "simple/login",
+    "name": "kauth/login",
     "description": "simple login",
     "type": "library",
     "license": "MIT",
