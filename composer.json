@@ -1,0 +1,19 @@
+{
+    "name": "simple/login",
+    "description": "simple login",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Simple\\Login\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "KiemNV",
+            "email": "kiemnv@kaiyouit.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
