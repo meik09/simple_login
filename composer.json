@@ -6,7 +6,7 @@
     "autoload": {
         "psr-4": {
             "Simple\\Login\\": "src/",
-            "Simple\\Login\\Database\\": "src/database",
+            "Simple\\Login\\Database\\Factories\\": "src/database/factories",
             "Simple\\Login\\App\\Models\\": "src/app/Models"
         }
     },
@@ -25,7 +25,10 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "php artisan vendor:publish --provider='Simple\\Login\\SimpleLoginServiceProvider'"
+            "@php artisan vendor:publish --provider=\"Simple\\Login\\SimpleLoginServiceProvider\""
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --provider=\"Simple\\Login\\SimpleLoginServiceProvider\""
         ]
     },
     "extra": {
