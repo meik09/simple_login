@@ -25,10 +25,10 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "@php artisan vendor:publish --provider=\"Simple\\Login\\SimpleLoginServiceProvider\""
+            "@php artisan vendor:publish --provider=\"Simple\\Login\\SimpleLoginServiceProvider\" --force"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --provider=\"Simple\\Login\\SimpleLoginServiceProvider\""
+            "@php artisan vendor:publish --provider=\"Simple\\Login\\SimpleLoginServiceProvider\" --force"
         ]
     },
     "extra": {

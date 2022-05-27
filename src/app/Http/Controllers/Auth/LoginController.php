@@ -1,6 +1,6 @@
 <?php
 
-namespace Simple\Login\App\Http\Controllers;
+namespace Simple\Login\App\Http\Auth\Controllers;
 
 use App\Http\Controllers\Controller;
 use Simple\Login\App\Http\Requests\LoginRequest;
@@ -8,10 +8,6 @@ use Simple\Login\App\Http\Resources\LoginResource;
 
 class LoginController extends Controller
 {
-    public function test() {
-        return 'Hello word!';
-    }
-
     public function login(LoginRequest $request)
     {
         $data = $request->getData();

@@ -8,6 +8,12 @@ class SimpleLoginServiceProvider extends ServiceProvider
     public function boot() {
         $this->loadRoutesFrom(__DIR__.'/routes/api.php');
         $this->publishes([
+            __DIR__.'/config/' => config_path()
+        ], 'config');
+        $this->publishes([
+            __DIR__.'/app/Http/' => app_path('Http')
+        ], 'http');
+        $this->publishes([
             __DIR__.'/app/Models/' => app_path('Models')
         ], 'models');
         $this->publishes([
