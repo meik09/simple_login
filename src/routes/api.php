@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Simple\Login\Controllers\LoginController;
+use Simple\Login\App\Http\Controllers\LoginController;
 
-Route::get('/login', [LoginController::class, 'login']);
+Route::group(['prefix' => 'api/v1/auth'], function () {
+    Route::post('/login', [LoginController::class, 'login']);
+});
+Route::get('/test', [LoginController::class, 'test']);

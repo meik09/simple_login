@@ -5,7 +5,8 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Simple\\Login\\": "src/"
+            "Simple\\Login\\": "src/",
+            "JSimple\\Login\\Database\\Factories\\": "src/database/factories"
         }
     },
     "authors": [
@@ -15,5 +16,14 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "tymon/jwt-auth": "^1.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Simple\\Login\\SimpleLoginServiceProvider"
+            ]
+        }
+    }
 }
