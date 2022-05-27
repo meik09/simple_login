@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateJwtAuthsTable extends Migration
+class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateJwtAuthsTable extends Migration
      */
     public function up()
     {
-        Schema::create('jwt_auths', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
@@ -31,6 +31,6 @@ class CreateJwtAuthsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jwt_auths');
+        Schema::dropIfExists('users');
     }
 }
