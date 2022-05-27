@@ -12,6 +12,7 @@ class LoginResource extends JsonResource
         return [
             'accessToken' => $data['access_token'] ?? '',
             'expiresIn' => $data['expires_in'] ?? 0,
+            'test' => true,
         ];
     }
 }
