@@ -5,9 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Simple\\Login\\": "src/",
-            "Simple\\Login\\Database\\Factories\\": "src/database/factories",
-            "Simple\\Login\\App\\Models\\": "src/app/Models"
+            "Simple\\Login\\": "src/"
         }
     },
     "authors": [
@@ -22,14 +20,6 @@
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1"
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "@php artisan vendor:publish --provider=\"Simple\\Login\\SimpleLoginServiceProvider\" --force"
-        ],
-        "post-update-cmd": [
-            "@php artisan vendor:publish --provider=\"Simple\\Login\\SimpleLoginServiceProvider\" --force"
-        ]
     },
     "extra": {
         "laravel": {
