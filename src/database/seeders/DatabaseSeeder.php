@@ -1,8 +1,9 @@
 <?php
 
-namespace Simple\Login\Database\Seeders;
+namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Simple\Login\Database\Seeders\UserTableSeeder;
 
 class DatabaseSeeder extends Seeder
 {
