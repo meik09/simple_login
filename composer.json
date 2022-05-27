@@ -6,7 +6,7 @@
     "autoload": {
         "psr-4": {
             "Simple\\Login\\": "src/",
-            "Simple\\Login\\Database": "src/database",
+            "Simple\\Login\\Database\\": "src/database",
             "Simple\\Login\\App\\Models\\": "src/app/Models"
         }
     },
