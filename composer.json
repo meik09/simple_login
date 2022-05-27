@@ -23,6 +23,11 @@
     "require-dev": {
         "fakerphp/faker": "^1.9.1"
     },
+    "scripts": {
+        "post-install-cmd": [
+            "php artisan vendor:publish --provider='Simple\\Login\\SimpleLoginServiceProvider'"
+        ]
+    },
     "extra": {
         "laravel": {
             "providers": [
