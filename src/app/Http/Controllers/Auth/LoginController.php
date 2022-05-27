@@ -33,8 +33,7 @@ class LoginController extends Controller
     {
         return [
             'access_token' => $token,
-            'expires_in' => auth('api')->factory()->getTTL(),
-            'user' => auth()->user()
+            'expires_in' => auth()->factory()->getTTL()
         ];
     }
 
