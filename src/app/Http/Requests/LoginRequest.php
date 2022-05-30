@@ -27,10 +27,7 @@ class LoginRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            'email' => 'required|email|max:100',
-            'password' => 'required|min:6|max:36'
-        ];
+        return config('login.rules');
     }
 
     /**
@@ -40,14 +37,7 @@ class LoginRequest extends FormRequest
      */
     public function messages(): array
     {
-        return [
-            'email.required' => 'validation.login.email.required',
-            'email.email' => 'validation.login.email.email',
-            'email.max' => 'validation.login.email.max',
-            'password.min' => 'validation.login.password.min',
-            'password.max' => 'validation.login.password.max',
-            'rememberMe.nullable' => 'validation.login.rememberMe.nullable'
-        ];
+        return config('login.messages');
     }
 
     /**
@@ -56,10 +46,11 @@ class LoginRequest extends FormRequest
      */
     public function getData(): array
     {
-        return [
-            'email' => $this->get('email', ''),
-            'password' => $this->get('password', '')
-        ];
+        $data = [];
+        foreach (config('login.credentials') as $value) {
+            $data[$value] = $this->get($value, '');
+        }
+        return $data;
     }
 
     public function failedValidation(Validator $validator)
